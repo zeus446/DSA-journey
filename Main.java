@@ -1,26 +1,30 @@
-import java.util.Stack;
 
-//stack - Lifo data structure. Last in first out.
-// stores elements in the form of a vertical tower.
-//push()- to insert elements the top.
-//pop()- to remove elements from the top.
+//Queue -   Fifo data structure. First in first out
+// stores elements in the form of a Queue.
+//enque poll() - used to insert elements.
+//dequeue poll()- used remove elements from the top.
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main{
     public static void main(String args[]){
-        Stack<String> stack = new Stack<String>();
+        Queue<String> LinkedList = new LinkedList<String>();
 
-        stack.push("minecraft");
-        stack.push("Skytrim");
-        stack.push("Doom");
-        stack.push("God of War");
-        stack.push("Border lands");
+        LinkedList.offer("chad");
+        LinkedList.offer("Bob");
+        LinkedList.offer("karen");
+        LinkedList.offer("lux");
 
-        String top = stack.pop();
+        String front = LinkedList.poll();
 
-        System.out.println(stack.empty());
-        System.out.println("top using pop: " + top);
-        System.out.println(stack.peek());
-        System.out.println(stack);
-        System.out.println(stack.search("Doom"));
+        System.out.println(LinkedList.isEmpty());
+        System.out.println(LinkedList.contains("Bob"));
+        System.out.println(LinkedList.size());
+        System.out.println(LinkedList);
+        System.out.println(front);
+        System.out.println(LinkedList.peek());
+
+
     }
 }
